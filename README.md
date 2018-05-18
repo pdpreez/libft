@@ -1,0 +1,2 @@
+# libft
+School project backup
