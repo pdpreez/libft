@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testmain.c                                         :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 16:01:01 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/19 11:36:51 by ppreez           ###   ########.fr       */
+/*   Created: 2018/05/19 11:24:40 by ppreez            #+#    #+#             */
+/*   Updated: 2018/05/19 11:27:00 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(int argc, char **argv)
+char *ft_strncpy(char *dst, const char *src, size_t len)
 {
-	printf("arg 1 / dst = \t%s\n", argv[1]);
-	printf("arg 2 / src = \t%s\n", argv[2]);
-	printf("String function test result : %s", strncpy(argv[1], argv[2], 6));
-	return (0);
+	int i;
+
+	i = 0;
+	ft_strclr(dst);
+	while (src[i] != '\0' && i <= len)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	return (dst);
 }
+
