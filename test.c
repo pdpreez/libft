@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/16 17:12:47 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/19 08:58:56 by ppreez           ###   ########.fr       */
+/*   Created: 2018/05/19 09:47:12 by ppreez            #+#    #+#             */
+/*   Updated: 2018/05/19 10:41:26 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <ctype.h>
+#include <stdio.h>
 #include "libft.h"
 
-void	ft_putchar(char c)
+int	main(void)
 {
-	write(1, &c, 1);
+	int i;
+
+	i = 'x';
+	printf("%d\n", isalnum(i));
+	printf("%d\n", ft_isalnum(i));
+	return (0);
 }

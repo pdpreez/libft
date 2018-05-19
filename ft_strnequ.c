@@ -6,13 +6,15 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/18 08:18:36 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/18 14:52:15 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/05/19 08:24:52 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	int i;
+	unsigned long i;
 
 	i = 0;
 	while (s1[i] == s2[i] && i < n)
