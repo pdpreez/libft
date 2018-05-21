@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testmain.c                                         :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 16:01:01 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/21 13:50:47 by ppreez           ###   ########.fr       */
+/*   Created: 2018/05/21 13:32:40 by ppreez            #+#    #+#             */
+/*   Updated: 2018/05/21 14:07:48 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "string.h"
 
-int	main(int argc, char **argv)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int a;
+	int i;
 
-	a = 0;
-	printf("arg 1 = \t%s\n", argv[1]);
-	printf("arg 2 = \t%s\n", argv[2]);
-	printf("%d\n", strncmp(argv[1], argv[2], 4));
-	printf("%d", ft_strncmp(argv[1], argv[2], 4));
-	return (0);
+	i = 0;
+	while (s1[i] - s2[i] == 0 && s1[i] != '\0' && s2[i] != '\0' && i <= n)
+		i++;
+	return (s1[i] - s2[i]);
 }
