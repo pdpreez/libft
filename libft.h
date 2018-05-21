@@ -6,7 +6,7 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 15:14:11 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/21 13:49:52 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/05/21 16:55:30 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@
 # include <unistd.h>
 # include <string.h>
 
+void	ft_putnbr(int n);
 void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(char const *s);
 void	ft_strclr(char *s);
 void	ft_putendl(char const *s);

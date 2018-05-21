@@ -5,21 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/19 09:47:12 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/19 10:41:26 by ppreez           ###   ########.fr       */
+/*   Created: 2018/05/21 15:59:08 by ppreez            #+#    #+#             */
+/*   Updated: 2018/05/21 16:56:42 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	main(void)
 {
-	int i;
-
-	i = 'x';
-	printf("%d\n", isalnum(i));
-	printf("%d\n", ft_isalnum(i));
-	return (0);
+	ft_putchar_fd('a', 0);
+	return(0);
 }
