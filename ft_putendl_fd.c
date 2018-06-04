@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whitespace.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 11:02:19 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/21 11:13:48 by ppreez           ###   ########.fr       */
+/*   Created: 2018/05/22 12:53:58 by ppreez            #+#    #+#             */
+/*   Updated: 2018/05/26 14:48:43 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "string.h"
+#include "libft.h"
 
-int	iswhite(const char c)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	if (c == '\t' || c == '\n' || c == ' ')
-		return (1);
-	if (c == '\r' || c == '\v' || c == '\f')
-		return (1);
-	else
-		return (0);
+	if (s && fd >= 0)
+	{
+		ft_putstr_fd(s, fd);
+		ft_putchar_fd('\n', fd);
+	}
 }

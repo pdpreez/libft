@@ -6,7 +6,7 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 09:06:43 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/19 09:10:23 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/05/26 14:48:58 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	if (s)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
 }

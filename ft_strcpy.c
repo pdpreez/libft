@@ -6,7 +6,7 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/16 16:36:45 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/21 13:23:13 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/05/25 10:43:49 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char	*ft_strcpy(char *dst, const char *src)
 	int i;
 
 	i = 0;
-	ft_strclr(dst);
 	while (src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
 	}
+	dst[i] = '\0';
 	return (dst);
 }
