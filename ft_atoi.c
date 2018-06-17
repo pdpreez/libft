@@ -6,40 +6,29 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 15:03:04 by ppreez            #+#    #+#             */
-/*   Updated: 2018/05/28 10:31:39 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/06/12 16:11:38 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	diglen(const char *str, int i)
+static long	conv(const char *str, int i, int m)
 {
-	size_t len;
-
-	len = 0;
-	while (str[i] != '\0')
-	{
-		if (ft_isdigit(str[i]))
-			len++;
-		i++;
-	}
-	return (len);
-}
-
-static int	conv(const char *str, int i, int m)
-{
-	size_t	a;
+	long	a;
+	int		dig;
 
 	a = 0;
-	if (diglen(str, i) > 19 && m == 1)
-		return (-1);
-	if (diglen(str, i) > 19 && m == -1)
-		return (0);
+	dig = 0;
 	while (ft_isdigit(str[i]))
 	{
 		a *= 10;
 		a += str[i] - '0';
+		if (m == 1 && dig > 17)
+			return (-1);
+		if (m == -1 && dig > 17)
+			return (0);
 		i++;
+		dig++;
 	}
 	return (a);
 }

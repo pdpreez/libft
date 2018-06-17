@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wordcount.c                                     :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/30 16:01:14 by ppreez            #+#    #+#             */
-/*   Updated: 2018/06/13 08:57:45 by ppreez           ###   ########.fr       */
+/*   Created: 2018/06/13 08:28:17 by ppreez            #+#    #+#             */
+/*   Updated: 2018/06/13 09:02:15 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_wordcount(char const *s)
+char	*ft_strrev(char *str)
 {
-	size_t	i;
-	size_t	wc;
+	int		i;
+	int		j;
+	char	tmp;
 
 	i = 0;
-	wc = 0;
-	while (s[i])
+	j = ft_strlen(str);
+	if (!str)
+		return (NULL);
+	while (i < j)
 	{
-		if (!(ft_isspace(s[i])))
-		{
-			if ((ft_isspace(s[i + 1]) == 1 || s[i + 1] == '\0'))
-				wc++;
-			i++;
-		}
+		tmp = str[i];
+		str[i] = str[j];
+		str[j] = tmp;
+		i++;
+		j--;
 	}
-	return (wc);
+	return (str);
 }

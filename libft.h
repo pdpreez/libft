@@ -6,7 +6,7 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 15:14:11 by ppreez            #+#    #+#             */
-/*   Updated: 2018/06/01 11:44:56 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/06/14 14:21:32 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,15 @@ int					ft_isprint(int c);
 int					ft_isalnum(int c);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 int					ft_isspace(const char c);
 size_t				ft_wordcount(char const *s);
+char				*ft_strrev(char *str);
+char				*ft_strndup(const char *str, size_t n);
 
 #endif
