@@ -6,7 +6,7 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 15:14:11 by ppreez            #+#    #+#             */
-/*   Updated: 2018/06/18 09:30:57 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/06/19 09:42:45 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
+# define BUFF_SIZE		32
 # define MAXINT			2147483647
 # define MAXINTSTR		"2147483647"
 # define MININT			-2147483648
@@ -96,6 +99,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstaddend(t_list **alst, t_list *new);
 
+int					get_next_line(const int fd, char **line);
+int					linesave(char **line, t_list *node, char *buffer);
 int					ft_isspace(const char c);
 size_t				ft_wordcount(char const *s);
 char				*ft_strrev(char *str);
