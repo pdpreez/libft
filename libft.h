@@ -6,7 +6,7 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 15:14:11 by ppreez            #+#    #+#             */
-/*   Updated: 2018/06/19 09:42:45 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/06/19 12:14:43 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 
-# define BUFF_SIZE		32
+# define BUFF_SIZE		2000000
 # define MAXINT			2147483647
 # define MAXINTSTR		"2147483647"
 # define MININT			-2147483648
