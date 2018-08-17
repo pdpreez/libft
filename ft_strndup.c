@@ -6,13 +6,13 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 14:17:46 by ppreez            #+#    #+#             */
-/*   Updated: 2018/06/14 14:21:54 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/07/26 09:19:48 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strndup(const char *str, size_t n)
+char	*ft_strndup(const char *str, size_t n)
 {
 	size_t	i;
 	char	*new;

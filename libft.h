@@ -6,7 +6,7 @@
 /*   By: ppreez <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 15:14:11 by ppreez            #+#    #+#             */
-/*   Updated: 2018/06/19 12:14:43 by ppreez           ###   ########.fr       */
+/*   Updated: 2018/07/02 17:16:49 by ppreez           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,19 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 
-# define BUFF_SIZE		2000000
+# define BUFF_SIZE		500
 # define MAXINT			2147483647
 # define MAXINTSTR		"2147483647"
 # define MININT			-2147483648
 # define MININTSTR		"-2147483648"
 # define MAXSIZET		9223372036854775807U
 # define MINSIZET		-9223372036854775808U
+# define MAGENTA		"\x1b[35m"
+# define RESET			"\x1b[0m"
+# define CYAN			"\x1b[36m"
+# define GREEN			"\x1b[32m"
+# define YELLOW			"\x1b[33m"
+# define RED			"\x1b[31m"
 
 typedef unsigned char	t_uchar;
 typedef unsigned int	t_uint;
@@ -105,5 +111,6 @@ int					ft_isspace(const char c);
 size_t				ft_wordcount(char const *s);
 char				*ft_strrev(char *str);
 char				*ft_strndup(const char *str, size_t n);
+void				ft_debug(int fd, char *str, char c);
 
 #endif
